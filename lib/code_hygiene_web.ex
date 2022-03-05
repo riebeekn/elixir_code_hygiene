@@ -17,6 +17,8 @@ defmodule CodeHygieneWeb do
   and import those modules here.
   """
 
+  use Boundary, deps: [CodeHygiene], exports: [Endpoint]
+
   def controller do
     quote do
       use Phoenix.Controller, namespace: CodeHygieneWeb
