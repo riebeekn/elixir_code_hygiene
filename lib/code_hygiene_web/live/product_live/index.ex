@@ -1,7 +1,7 @@
 defmodule CodeHygieneWeb.ProductLive.Index do
+  @moduledoc false
   use CodeHygieneWeb, :live_view
 
-  alias CodeHygiene.Products
   alias CodeHygiene.Products.Product
 
   @impl true
@@ -17,7 +17,7 @@ defmodule CodeHygieneWeb.ProductLive.Index do
   defp apply_action(socket, :edit, %{"id" => id}) do
     socket
     |> assign(:page_title, "Edit Product")
-    |> assign(:product, Products.get_product!(id))
+    |> assign(:product, CodeHygiene.get_product!(id))
   end
 
   defp apply_action(socket, :new, _params) do
@@ -34,13 +34,13 @@ defmodule CodeHygieneWeb.ProductLive.Index do
 
   @impl true
   def handle_event("delete", %{"id" => id}, socket) do
-    product = Products.get_product!(id)
-    {:ok, _} = Products.delete_product(product)
+    product = CodeHygiene.get_product!(id)
+    {:ok, _} = CodeHygiene.delete_product(product)
 
     {:noreply, assign(socket, :products, list_products())}
   end
 
   defp list_products do
-    Products.list_products()
+    CodeHygiene.list_products()
   end
 end

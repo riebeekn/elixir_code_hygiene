@@ -1,11 +1,10 @@
 defmodule CodeHygieneWeb.ProductLive.FormComponent do
+  @moduledoc false
   use CodeHygieneWeb, :live_component
-
-  alias CodeHygiene.Products
 
   @impl true
   def update(%{product: product} = assigns, socket) do
-    changeset = Products.change_product(product)
+    changeset = CodeHygiene.change_product(product)
 
     {:ok,
      socket
@@ -17,7 +16,7 @@ defmodule CodeHygieneWeb.ProductLive.FormComponent do
   def handle_event("validate", %{"product" => product_params}, socket) do
     changeset =
       socket.assigns.product
-      |> Products.change_product(product_params)
+      |> CodeHygiene.change_product(product_params)
       |> Map.put(:action, :validate)
 
     {:noreply, assign(socket, :changeset, changeset)}
@@ -28,7 +27,7 @@ defmodule CodeHygieneWeb.ProductLive.FormComponent do
   end
 
   defp save_product(socket, :edit, product_params) do
-    case Products.update_product(socket.assigns.product, product_params) do
+    case CodeHygiene.update_product(socket.assigns.product, product_params) do
       {:ok, _product} ->
         {:noreply,
          socket
@@ -41,7 +40,7 @@ defmodule CodeHygieneWeb.ProductLive.FormComponent do
   end
 
   defp save_product(socket, :new, product_params) do
-    case Products.create_product(product_params) do
+    case CodeHygiene.create_product(product_params) do
       {:ok, _product} ->
         {:noreply,
          socket

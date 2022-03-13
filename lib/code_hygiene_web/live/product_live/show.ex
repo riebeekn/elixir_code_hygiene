@@ -1,7 +1,6 @@
 defmodule CodeHygieneWeb.ProductLive.Show do
+  @moduledoc false
   use CodeHygieneWeb, :live_view
-
-  alias CodeHygiene.Products
 
   @impl true
   def mount(_params, _session, socket) do
@@ -13,7 +12,7 @@ defmodule CodeHygieneWeb.ProductLive.Show do
     {:noreply,
      socket
      |> assign(:page_title, page_title(socket.assigns.live_action))
-     |> assign(:product, Products.get_product!(id))}
+     |> assign(:product, CodeHygiene.get_product!(id))}
   end
 
   defp page_title(:show), do: "Show Product"
