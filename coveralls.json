@@ -3,6 +3,7 @@
     "test",
     "lib/code_hygiene/application.ex",
     "lib/code_hygiene_web.ex",
+    "lib/code_hygiene_web/live/live_helpers.ex",
     "lib/code_hygiene_web/router.ex",
     "lib/code_hygiene_web/telemetry.ex",
     "lib/code_hygiene_web/views/error_helpers.ex"

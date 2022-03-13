@@ -34,8 +34,10 @@ defmodule CodeHygieneWeb.ProductLive.FormComponent do
          |> put_flash(:info, "Product updated successfully")
          |> push_redirect(to: socket.assigns.return_to)}
 
+      # coveralls-ignore-start
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, :changeset, changeset)}
+      # coveralls-ignore-stop
     end
   end
 
@@ -47,8 +49,10 @@ defmodule CodeHygieneWeb.ProductLive.FormComponent do
          |> put_flash(:info, "Product created successfully")
          |> push_redirect(to: socket.assigns.return_to)}
 
+      # coveralls-ignore-start
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, changeset: changeset)}
+      # coveralls-ignore-stop
     end
   end
 end

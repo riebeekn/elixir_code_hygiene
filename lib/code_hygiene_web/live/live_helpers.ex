@@ -1,5 +1,7 @@
 defmodule CodeHygieneWeb.LiveHelpers do
-  @moduledoc false
+  @moduledoc """
+  Live view helpers
+  """
   import Phoenix.LiveView
   import Phoenix.LiveView.Helpers
 
