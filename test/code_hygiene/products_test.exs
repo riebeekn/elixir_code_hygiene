@@ -6,7 +6,7 @@ defmodule CodeHygiene.ProductsTest do
   describe "products" do
     alias CodeHygieneSchema.Product
 
-    import CodeHygiene.ProductsFixtures
+    import CodeHygieneFixtures.ProductsFixtures
 
     @invalid_attrs %{name: nil, price: nil}
 

@@ -37,7 +37,7 @@ defmodule CodeHygieneWeb.ProductLive.FormComponent do
       # coveralls-ignore-start
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, :changeset, changeset)}
-      # coveralls-ignore-stop
+        # coveralls-ignore-stop
     end
   end
 
@@ -52,7 +52,7 @@ defmodule CodeHygieneWeb.ProductLive.FormComponent do
       # coveralls-ignore-start
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, changeset: changeset)}
-      # coveralls-ignore-stop
+        # coveralls-ignore-stop
     end
   end
 end

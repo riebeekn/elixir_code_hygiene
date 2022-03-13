@@ -2,7 +2,7 @@ defmodule CodeHygieneWeb.ProductLiveTest do
   use CodeHygieneWeb.ConnCase
 
   import Phoenix.LiveViewTest
-  import CodeHygiene.ProductsFixtures
+  import CodeHygieneFixtures.ProductsFixtures
 
   @create_attrs %{name: "some name", price: 42}
   @update_attrs %{name: "some updated name", price: 43}

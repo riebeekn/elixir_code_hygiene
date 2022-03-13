@@ -126,7 +126,7 @@ defmodule CodeHygiene.Accounts.UserToken do
       # coveralls-ignore-start
       :error ->
         :error
-      # coveralls-ignore-stop
+        # coveralls-ignore-stop
     end
   end
 
@@ -161,7 +161,7 @@ defmodule CodeHygiene.Accounts.UserToken do
       # coveralls-ignore-start
       :error ->
         :error
-      # coveralls-ignore-stop
+        # coveralls-ignore-stop
     end
   end
 
@@ -180,6 +180,7 @@ defmodule CodeHygiene.Accounts.UserToken do
   end
 
   def user_and_contexts_query(user, [_ | _] = contexts) do
-    from t in CodeHygiene.Accounts.UserToken, where: t.user_id == ^user.id and t.context in ^contexts
+    from t in CodeHygiene.Accounts.UserToken,
+      where: t.user_id == ^user.id and t.context in ^contexts
   end
 end

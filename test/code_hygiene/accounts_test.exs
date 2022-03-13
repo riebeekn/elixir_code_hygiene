@@ -3,7 +3,7 @@ defmodule CodeHygiene.AccountsTest do
 
   alias CodeHygiene.Accounts
 
-  import CodeHygiene.AccountsFixtures
+  import CodeHygieneFixtures.AccountsFixtures
   alias CodeHygiene.Accounts.{User, UserToken}
 
   describe "get_user_by_email/1" do

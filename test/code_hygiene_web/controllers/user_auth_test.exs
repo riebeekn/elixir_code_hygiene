@@ -3,7 +3,7 @@ defmodule CodeHygieneWeb.UserAuthTest do
 
   alias CodeHygiene.Accounts
   alias CodeHygieneWeb.UserAuth
-  import CodeHygiene.AccountsFixtures
+  import CodeHygieneFixtures.AccountsFixtures
 
   @remember_me_cookie "_code_hygiene_web_user_remember_me"
 

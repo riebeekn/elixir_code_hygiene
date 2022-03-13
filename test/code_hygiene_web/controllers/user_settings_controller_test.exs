@@ -2,7 +2,7 @@ defmodule CodeHygieneWeb.UserSettingsControllerTest do
   use CodeHygieneWeb.ConnCase, async: true
 
   alias CodeHygiene.Accounts
-  import CodeHygiene.AccountsFixtures
+  import CodeHygieneFixtures.AccountsFixtures
 
   setup :register_and_log_in_user
 

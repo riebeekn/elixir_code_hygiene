@@ -3,7 +3,7 @@ defmodule CodeHygiene do
   API for the application, all calls from the front-end should go thru
   this module vs directly calling into individual context modules.
   """
-  use Boundary, deps: [CodeHygieneSchema]
+  use Boundary, deps: [CodeHygieneSchema], exports: [Accounts, Accounts.User]
 
   alias CodeHygiene.Products
   alias CodeHygieneSchema.Product

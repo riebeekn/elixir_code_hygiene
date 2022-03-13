@@ -1,7 +1,7 @@
 defmodule CodeHygieneWeb.UserRegistrationControllerTest do
   use CodeHygieneWeb.ConnCase, async: true
 
-  import CodeHygiene.AccountsFixtures
+  import CodeHygieneFixtures.AccountsFixtures
 
   describe "GET /users/register" do
     test "renders registration page", %{conn: conn} do

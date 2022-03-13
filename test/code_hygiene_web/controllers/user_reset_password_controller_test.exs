@@ -3,7 +3,7 @@ defmodule CodeHygieneWeb.UserResetPasswordControllerTest do
 
   alias CodeHygiene.Accounts
   alias CodeHygiene.Repo
-  import CodeHygiene.AccountsFixtures
+  import CodeHygieneFixtures.AccountsFixtures
 
   setup do
     %{user: user_fixture()}

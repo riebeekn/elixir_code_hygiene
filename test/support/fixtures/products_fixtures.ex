@@ -1,8 +1,9 @@
-defmodule CodeHygiene.ProductsFixtures do
+defmodule CodeHygieneFixtures.ProductsFixtures do
   @moduledoc """
   This module defines test helpers for creating
   entities via the `CodeHygiene.Products` context.
   """
+  use Boundary, check: [in: false, out: false]
 
   @doc """
   Generate a product.

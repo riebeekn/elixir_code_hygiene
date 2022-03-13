@@ -1,7 +1,7 @@
 defmodule CodeHygieneWeb.UserSessionControllerTest do
   use CodeHygieneWeb.ConnCase, async: true
 
-  import CodeHygiene.AccountsFixtures
+  import CodeHygieneFixtures.AccountsFixtures
 
   setup do
     %{user: user_fixture()}
