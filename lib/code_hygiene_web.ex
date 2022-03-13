@@ -17,7 +17,7 @@ defmodule CodeHygieneWeb do
   and import those modules here.
   """
 
-  use Boundary, deps: [CodeHygiene], exports: [Endpoint]
+  use Boundary, deps: [CodeHygiene, CodeHygieneSchema], exports: [Endpoint]
 
   def controller do
     quote do

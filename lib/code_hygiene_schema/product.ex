@@ -1,6 +1,14 @@
-defmodule CodeHygiene.Products.Product do
+defmodule CodeHygieneSchema.Product do
+  @moduledoc """
+  The products schema
+  """
   use Ecto.Schema
   import Ecto.Changeset
+
+  @type t :: %__MODULE__{
+          name: String.t(),
+          price: integer()
+        }
 
   schema "products" do
     field :name, :string

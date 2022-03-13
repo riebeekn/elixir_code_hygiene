@@ -2,7 +2,7 @@ defmodule CodeHygieneWeb.ProductLive.Index do
   @moduledoc false
   use CodeHygieneWeb, :live_view
 
-  alias CodeHygiene.Products.Product
+  alias CodeHygieneSchema.Product
 
   @impl true
   def mount(_params, _session, socket) do

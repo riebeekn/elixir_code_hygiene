@@ -4,7 +4,7 @@ defmodule CodeHygiene.ProductsTest do
   alias CodeHygiene.Products
 
   describe "products" do
-    alias CodeHygiene.Products.Product
+    alias CodeHygieneSchema.Product
 
     import CodeHygiene.ProductsFixtures
 

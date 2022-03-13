@@ -6,7 +6,7 @@ defmodule CodeHygiene.Products do
   import Ecto.Query, warn: false
   alias CodeHygiene.Repo
 
-  alias CodeHygiene.Products.Product
+  alias CodeHygieneSchema.Product
 
   @doc """
   Returns the list of products.
