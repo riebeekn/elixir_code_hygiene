@@ -1,4 +1,5 @@
 defmodule CodeHygieneWeb.LayoutView do
+  @moduledoc false
   use CodeHygieneWeb, :view
 
   # Phoenix LiveDashboard is available only in development by default,

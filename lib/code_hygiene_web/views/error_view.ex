@@ -1,4 +1,5 @@
 defmodule CodeHygieneWeb.ErrorView do
+  @moduledoc false
   use CodeHygieneWeb, :view
 
   # If you want to customize a particular status code

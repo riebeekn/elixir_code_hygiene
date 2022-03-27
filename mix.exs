@@ -1,10 +1,13 @@
 defmodule CodeHygiene.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+  @source_url "https://github.com/riebeekn/elixir_code_hygiene"
+
   def project do
     [
       app: :code_hygiene,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:boundary, :gettext] ++ Mix.compilers(),
@@ -17,7 +20,9 @@ defmodule CodeHygiene.MixProject do
         "coveralls.detail": :test,
         "coveralls.post": :test,
         "coveralls.html": :test
-      ]
+      ],
+      name: "Code Hygiene example app",
+      docs: docs()
     ]
   end
 
@@ -80,6 +85,55 @@ defmodule CodeHygiene.MixProject do
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.deploy": ["esbuild default --minify", "phx.digest"],
       check: ["format", "credo --strict", "compile --warnings-as-errors", "dialyzer", "docs"]
+    ]
+  end
+
+  defp docs do
+    [
+      main: "CodeHygiene",
+      assets: "docs/assets",
+      logo: "docs/assets/images/logo.svg",
+      source_ref: "v#{@version}",
+      source_url: @source_url,
+      formatters: ["html"],
+      groups_for_modules: groups_for_modules()
+    ]
+  end
+
+  defp groups_for_modules do
+    [
+      API: [
+        CodeHygiene,
+        CodeHygiene.Products,
+        CodeHygiene.Repo
+      ],
+      Accounts: [
+        CodeHygiene.Accounts,
+        CodeHygiene.Accounts.UserNotifier,
+        CodeHygiene.Accounts.UserToken,
+        CodeHygiene.Accounts.User
+      ],
+      "Accounts - Frontend": [
+        CodeHygieneWeb.UserAuth,
+        CodeHygieneWeb.UserConfirmationController,
+        CodeHygieneWeb.UserRegistrationController,
+        CodeHygieneWeb.UserResetPasswordController,
+        CodeHygieneWeb.UserSessionController,
+        CodeHygieneWeb.UserSettingsController
+      ],
+      Phoenix: [
+        CodeHygieneWeb,
+        CodeHygieneWeb.Endpoint,
+        CodeHygieneWeb.ErrorHelpers,
+        CodeHygieneWeb.Gettext,
+        CodeHygieneWeb.LiveHelpers,
+        CodeHygieneWeb.Router,
+        CodeHygieneWeb.Router.Helpers
+      ],
+      Schemas: [
+        CodeHygieneSchema,
+        CodeHygieneSchema.Product
+      ]
     ]
   end
 end
