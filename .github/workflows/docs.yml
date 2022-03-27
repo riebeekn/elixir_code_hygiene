@@ -1,0 +1,24 @@
+name: Publish docs
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generateDocs:
+    name: Generate project documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Elixir
+        uses: erlef/setup-beam@v1
+        with:
+          elixir-version: "1.13.3"
+          otp-version: "24.2"
+      - name: Build docs
+        uses: lee-dohm/generate-elixir-docs@v1
+      - name: Publish to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./doc
