@@ -96,7 +96,24 @@ defmodule CodeHygiene.MixProject do
       source_ref: "v#{@version}",
       source_url: @source_url,
       formatters: ["html"],
-      groups_for_modules: groups_for_modules()
+      groups_for_modules: groups_for_modules(),
+      extras: extras(),
+      groups_for_extras: groups_for_extras()
+    ]
+  end
+
+  defp extras do
+    [
+      "CHANGELOG.md",
+
+      # Guides
+      "docs/guides/dev_setup.md"
+    ]
+  end
+
+  defp groups_for_extras do
+    [
+      Guides: ~r{guides/[^\/]+\.md}
     ]
   end
 
