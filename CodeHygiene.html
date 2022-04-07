@@ -10,7 +10,7 @@
     <title>CodeHygiene — Code Hygiene example app v0.1.0</title>
     <link rel="stylesheet" href="dist/elixir-d5ff82e6b0f5651c0ac0.css" />
 
-    <script src="dist/sidebar_items-2a32a2496d.js"></script>
+    <script src="dist/sidebar_items-21cf89a394.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -213,7 +213,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">change_product(product, attrs \\ %{})</h1>
 
-      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -222,6 +222,13 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> change_product(product :: <a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>(), attrs :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()) ::
+  <a href="https://hexdocs.pm/ecto/3.7.1/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+
+      </div>
 
 <p>See <a href="CodeHygiene.Products.html#change_product/2"><code class="inline">CodeHygiene.Products.change_product/2</code></a>.</p>
   </section>
@@ -237,7 +244,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create_product(attrs \\ %{})</h1>
 
-      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L21" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -246,6 +253,13 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> create_product(attrs :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()) ::
+  {:ok, <a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>()} | {:error, <a href="https://hexdocs.pm/ecto/3.7.1/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+
+      </div>
 
 <p>See <a href="CodeHygiene.Products.html#create_product/1"><code class="inline">CodeHygiene.Products.create_product/1</code></a>.</p>
   </section>
@@ -259,7 +273,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">delete_product(product)</h1>
 
-      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -268,6 +282,13 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> delete_product(product :: <a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>()) ::
+  {:ok, <a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>()} | {:error, <a href="https://hexdocs.pm/ecto/3.7.1/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+
+      </div>
 
 <p>See <a href="CodeHygiene.Products.html#delete_product/1"><code class="inline">CodeHygiene.Products.delete_product/1</code></a>.</p>
   </section>
@@ -281,7 +302,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_product!(id)</h1>
 
-      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -290,6 +311,13 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> get_product!(id :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>()) ::
+  <a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>() | Ecto.NoResultsError</pre>
+
+      </div>
 
 <p>See <a href="CodeHygiene.Products.html#get_product!/1"><code class="inline">CodeHygiene.Products.get_product!/1</code></a>.</p>
   </section>
@@ -303,7 +331,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">list_products()</h1>
 
-      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -312,6 +340,12 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> list_products() :: [<a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>()]</pre>
+
+      </div>
 
 <p>See <a href="CodeHygiene.Products.html#list_products/0"><code class="inline">CodeHygiene.Products.list_products/0</code></a>.</p>
   </section>
@@ -325,7 +359,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">update_product(product, attrs)</h1>
 
-      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/riebeekn/elixir_code_hygiene/blob/v0.1.0/lib/code_hygiene.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -334,6 +368,13 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> update_product(product :: <a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>(), attrs :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()) ::
+  {:ok, <a href="CodeHygieneSchema.Product.html#t:t/0">CodeHygieneSchema.Product.t</a>()} | {:error, <a href="https://hexdocs.pm/ecto/3.7.1/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+
+      </div>
 
 <p>See <a href="CodeHygiene.Products.html#update_product/2"><code class="inline">CodeHygiene.Products.update_product/2</code></a>.</p>
   </section>
